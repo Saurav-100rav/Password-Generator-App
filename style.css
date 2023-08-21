@@ -1,0 +1,245 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    /* font-size: var(--base-font-size); */
+}
+body{
+    background-color: #002339;
+    color: #fff;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+.container{
+    border: 2px solid #70A4E7;
+    width: 65vw;
+    height: 90vh;
+    margin: 1rem auto 1rem;
+    padding: 0.2rem;
+    
+    border-radius: 0.8rem;
+    box-shadow: 8px 19px 26px rgba(200, 89, 255, 0.1);
+    /* max-width: 700px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container h1{
+    font-weight: 500;
+    font-size: 2.3rem;
+    opacity: 0; /* Initially hide the text */
+    animation: fadeIn 2.5s ease forwards; /* Apply the fadeIn animation */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Slide up slightly */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container h1 span{
+    color: #019f55;
+    border-bottom: 4px solid #019f55;
+    padding-bottom: 0.5rem; 
+}
+
+.slider-container {
+    width: 90%;
+    margin: 3.8rem auto 2rem;
+    text-align: center;
+}
+
+.slider {
+    width: 100%;
+}
+
+#slider-value {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+.slider::-webkit-slider-thumb {
+    background-color: #cc1818; /* White color */
+}
+.display{
+    /* border: 3px solid rgb(214, 55, 89); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    background-color: #002339;
+    color: #333;
+    padding: 16px 20px;
+    border-radius: 11px;
+}
+.display .password{
+    width: 8%;
+}
+
+.display .password img{
+    width: 100%;
+    cursor: pointer;
+}
+.display .password span{
+    display: none;
+}
+
+.display input{
+    border: 1px solid #70A4E7;
+    outline: none;
+    width: 86%;
+    font-size: 1.5rem;
+    padding: 1rem 1.4rem;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: #001F3F; /* Dark background color */
+    color: #E5E5E5; 
+}
+
+
+
+.container button{
+    margin-top: 1.5rem;
+    order: 0;
+    outline: 0;
+    background-color:  #f0d317;  /* Button background color */
+    border: none;
+    color: #002339; /* Dark blue text color */
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #d2f317; /* Slightly darker yellow color for button background on hover */
+    transform: scale(1.1);
+}
+@media (900px<width<1200px){
+    .container{
+        width: 75%;
+        height: 94vh;
+    }
+    .display input{
+        width: 90%;
+    }
+}
+@media (500px<width<900px){
+    .container{
+        width: 84%;
+        height: 96vh;
+    }
+    .display{
+        padding: 0.2rem;
+    }
+    .display input{
+        width: 90%;
+    }
+    .display .password {
+        width: 8%;
+        height: 90%;
+    }
+    .display .password img{
+        width: 100%;
+        height: 99%;
+    }
+}
+
+@media (300px<width<500px){
+    .container{
+        width: 90%;
+        height: 100vh;
+        margin: 0 auto;
+        /* padding: 0.5rem; */
+        text-align: center;
+    }
+    .container h1{
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+    .display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .display input{
+        width: 100%;
+    }
+    .display .password{
+        /* border: 1px solid red; */
+        margin-top: 1.6rem;
+        width: 88%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .display .password img{
+        width: 20%;
+        height: 96%;
+    }
+    .display .password span{
+        display: inline-block;
+        color: rgb(75, 71, 71);
+        font-size: 1.4rem;
+    }
+    #button{
+        margin-top: 0.2rem;
+    }
+}
+@media (max-width:300px){
+    .container{
+        width: 95%;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 0.1rem;
+        text-align: center;
+    }
+    .container h1{
+        /* font-weight: 500; */
+        font-size: 1.2rem;
+    }
+    .display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .display input{
+        width: 100%;
+    }
+    .display .password{
+        /* border: 1px solid red; */
+        margin-top: 1.6rem;
+        width: 88%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .display .password img{
+        width: 20%;
+        height: 96%;
+    }
+    .display .password span{
+        display: inline-block;
+        color: rgb(75, 71, 71);
+        font-size: 1.4rem;
+    }
+}
